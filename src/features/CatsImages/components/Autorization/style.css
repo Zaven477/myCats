@@ -1,0 +1,57 @@
+.form-autorization {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+  gap: 10px;
+  height: 100vh;
+  justify-content: center;
+}
+
+.form-input {
+  height: 45px;
+  border-radius: 3px;
+  font-size: 17px;
+  border: 0;
+  padding: 0 10px;
+}
+
+.btn {
+  height: 35px;
+  cursor: pointer;
+  background: rgba(33, 150, 243, 1);
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  font-size: 15px;
+}
+
+.container-form {
+  background-image: url("/pexels-pixabay-45170.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.error-login {
+  color: white;
+}
+
+.error-password {
+  color: white;
+}
+
+
+.text-login {
+  color: white;
+  font-size: 18px;
+}
+
+.text-password {
+  color: white;
+  font-size: 18px;
+}
+
+
