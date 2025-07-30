@@ -2,10 +2,11 @@ import { Formik } from "formik";
 import "./style.css";
 import { validationForm } from "./validation";
 import { useAutorization } from "./hook";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export const Autorization = () => {
   const initialValuesFields = { login: "", password: "" };
-  const { onSubmitForm } = useAutorization();
+  const { onSubmitForm, showPassword, isShowPassword } = useAutorization();
 
   return (
     <div className="container-form">
@@ -29,17 +30,26 @@ export const Autorization = () => {
               />
               <div className="error-login">{props.errors.login}</div>
               <div className="text-password">Пароль</div>
-              <input
-                type="password"
-                name="password"
-                className="form-input"
-                style={
-                  props.errors.password
-                    ? { border: "1px solid red" }
-                    : undefined
-                }
-                onChange={props.handleChange}
-              />
+              <div className="container-input">
+                <input
+                  type={isShowPassword ? "text" : "password"}
+                  name="password"
+                  className="form-input"
+                  style={
+                    props.errors.password
+                      ? { border: "1px solid red" }
+                      : undefined
+                  }
+                  onChange={props.handleChange}
+                />
+                <button
+                  type="button"
+                  className="btn-Eye"
+                  onClick={showPassword}
+                >
+                  {isShowPassword ? <FaEye /> : <FaEyeSlash />}
+                </button>
+              </div>
               <div className="error-password">{props.errors.password}</div>
               <button type="submit" className="btn">
                 Войти

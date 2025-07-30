@@ -56,6 +56,14 @@
   cursor: pointer;
 }
 
+.icon-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: rgba(33, 150, 243, 1);
+  cursor: pointer;
+  border: none;
+}
 
 @media (max-width: 1200px) {
   .container-cats {
@@ -75,11 +83,8 @@
   }
 }
 
-
 @media (max-width: 480px) {
   .container-cats {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-

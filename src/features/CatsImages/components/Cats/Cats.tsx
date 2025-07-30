@@ -4,15 +4,16 @@ import { useCats } from "./useCats";
 import { ClipLoader } from "react-spinners";
 import { FavoriteIcons } from "../FavoriteIcons/FavoriteIcons";
 import { COUNT_IMAGES } from "../../../../constants";
+import { FaArrowCircleUp } from "react-icons/fa";
 
 export const Cats = ({
   activeTab,
   addFavorites,
   removeFavorites,
   favoritesCats,
-  isFavorites
+  isFavorites,
 }: TCats) => {
-  const { cats, loading, error, nextImages } = useCats();
+  const { cats, loading, error, nextImages, handleScrollToTop } = useCats();
 
   const tabs = { all: cats, favorites: favoritesCats };
 
@@ -66,6 +67,13 @@ export const Cats = ({
             {loading ? "Загрузка..." : "Загрузить еще котиков"}
           </button>
         </div>
+      )}
+      {imagesCats.length > 20 && (
+        <FaArrowCircleUp
+          size={40}
+          className="icon-up"
+          onClick={handleScrollToTop}
+        />
       )}
     </div>
   );

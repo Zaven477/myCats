@@ -14,6 +14,8 @@
   font-size: 17px;
   border: 0;
   padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -43,7 +45,6 @@
   color: white;
 }
 
-
 .text-login {
   color: white;
   font-size: 18px;
@@ -54,4 +55,20 @@
   font-size: 18px;
 }
 
+.container-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+}
 
+.btn-Eye {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+}
