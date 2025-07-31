@@ -5,14 +5,14 @@ import { currentCats, errorCats, loadingCats } from "../../store/selectors";
 import { getImagesCats, getNextImagesCats } from "../../store/actions";
 
 export const useCats = () => {
-  const dispatch = useAppDispatch()
-  const cats = useAppSelector(currentCats)
-  const loading = useAppSelector(loadingCats)
-  const error = useAppSelector(errorCats)
+  const dispatch = useAppDispatch();
+  const cats = useAppSelector(currentCats);
+  const loading = useAppSelector(loadingCats);
+  const error = useAppSelector(errorCats);
 
-  const handleScrollToTop = () => {
-    window.scrollTo({top: 0, behavior: 'smooth'})
-  }
+  const handleScrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const nextImages = useCallback(
     (count: number) => {
@@ -25,5 +25,5 @@ export const useCats = () => {
     dispatch(getImagesCats(COUNT_IMAGES));
   }, [dispatch]);
 
-  return {cats, loading, error, nextImages, handleScrollToTop};
+  return { cats, loading, error, nextImages, handleScrollToTop };
 };
