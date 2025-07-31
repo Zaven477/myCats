@@ -11,13 +11,13 @@ body {
   background: rgba(33, 150, 243, 1);
   display: flex;
   align-items: center;
-  padding-right: 40px;
+  padding-right: 15px;
 }
 
 .tabs {
   display: flex;
   height: 100%;
-  padding-left: 40px;
+  padding-left: 15px;
 }
 
 .buttons {
