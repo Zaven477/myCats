@@ -5,6 +5,7 @@ import { ClipLoader } from "react-spinners";
 import { FavoriteIcons } from "../FavoriteIcons/FavoriteIcons";
 import { COUNT_IMAGES } from "../../../../constants";
 import { FaArrowCircleUp } from "react-icons/fa";
+import { CatsSlides } from "../ CatsSlides/CatsSlides";
 
 export const Cats = ({
   activeTab,
@@ -15,7 +16,11 @@ export const Cats = ({
 }: TCats) => {
   const { cats, loading, error, nextImages, handleScrollToTop } = useCats();
 
-  const tabs = { all: cats, favorites: favoritesCats };
+  const tabs = { all: cats, favorites: favoritesCats, slidesCats: <CatsSlides />};
+
+  if(activeTab === 'slidesCats') {
+    return tabs.slidesCats
+  }
 
   const imagesCats = tabs[activeTab];
 

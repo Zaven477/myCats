@@ -17,7 +17,11 @@ export const Layout = () => {
     {
       id: "favorites",
       label: "Любимые котики",
-      badge: favoritesCats.length
+      badge: favoritesCats.length,
+    },
+    {
+      id: "slidesCats",
+      label: "Слайды",
     },
   ];
 

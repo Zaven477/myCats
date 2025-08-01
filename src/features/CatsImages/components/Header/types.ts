@@ -1,4 +1,4 @@
-export type TabType = 'all' | 'favorites';
+export type TabType = 'all' | 'favorites' | 'slidesCats';
 
 
 export type Tab = {

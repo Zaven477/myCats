@@ -3,7 +3,7 @@ import type { HeaderProps } from "./types";
 import { useLogout } from "./hook";
 
 export const Header = ({ tabs, activeTab, setTab }: HeaderProps) => {
-  const {logout} = useLogout();
+  const { logout } = useLogout();
 
   return (
     <header className="header">
@@ -18,7 +18,9 @@ export const Header = ({ tabs, activeTab, setTab }: HeaderProps) => {
           </button>
         ))}
       </div>
-      <button className="btn-logout" onClick={logout}>Выйти</button>
+      <button className="btn-logout" onClick={logout}>
+        Выйти
+      </button>
     </header>
   );
 };
