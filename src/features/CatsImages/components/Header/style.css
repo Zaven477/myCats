@@ -43,3 +43,19 @@ body {
   color: rgba(33, 150, 243, 1);
 }
 
+
+@media (max-width: 430px) {
+  .buttons {
+    padding: 24px 8px;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .buttons {
+    padding: 24px 4px;
+  }
+}
+
+
+
