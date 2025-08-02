@@ -34,11 +34,16 @@ export const CatsSlides = () => {
       >
         <IoChevronBack size={30} color={"#00BFFF"} />
       </button>
-      {catsImagesUrl.map((cat, index) =>
-        currentIndex === index ? (
-          <img src={cat.url} key={cat.id} className="slide-image" />
-        ) : null
-      )}
+      <div className="slides-container">
+        <div
+          className="slides-wrapper"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {catsImagesUrl.map((cat) => (
+            <img src={cat.url} key={cat.id} className="slide-image" />
+          ))}
+        </div>
+      </div>
       <button
         className={`btn-next ${
           currentIndex < catsImagesUrl.length - 1 ? "visible" : "hidden"
