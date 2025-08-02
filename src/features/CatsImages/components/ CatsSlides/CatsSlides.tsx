@@ -28,21 +28,25 @@ export const CatsSlides = () => {
 
   return (
     <div className="container-slider">
-      {currentIndex > 0 && (
-        <button className="btn-next" onClick={prevImage}>
-          <IoChevronBack size={30} color={"#00BFFF"} />
-        </button>
-      )}
+      <button
+        className={`btn-next ${currentIndex > 0 ? "visible" : "hidden"}`}
+        onClick={prevImage}
+      >
+        <IoChevronBack size={30} color={"#00BFFF"} />
+      </button>
       {catsImagesUrl.map((cat, index) =>
         currentIndex === index ? (
           <img src={cat.url} key={cat.id} className="slide-image" />
         ) : null
       )}
-      {currentIndex < catsImagesUrl.length - 1 && (
-        <button className="btn-next" onClick={nextImage}>
-          <IoChevronForward size={30} color={"#00BFFF"} />
-        </button>
-      )}
+      <button
+        className={`btn-next ${
+          currentIndex < catsImagesUrl.length - 1 ? "visible" : "hidden"
+        }`}
+        onClick={nextImage}
+      >
+        <IoChevronForward size={30} color={"#00BFFF"} />
+      </button>
     </div>
   );
 };

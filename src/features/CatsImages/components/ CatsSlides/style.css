@@ -19,6 +19,14 @@
   cursor: pointer;
 }
 
+.btn-next.visible {
+  visibility: visible;
+}
+
+.btn-next.hidden {
+  visibility: hidden;
+}
+
 @media (max-width: 768px) {
   .slide-image {
     width: 300px;
