@@ -1,15 +1,22 @@
+import { BulletsSlides } from "../BulletsSlides/BulletsSlides";
 import { useSlides } from "./hook";
 import { catsImagesUrl } from "./imagesUrl";
 import "./style.css";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 export const CatsSlides = () => {
-  const { currentIndex, nextImage, prevImage } = useSlides();
-  
+  const { currentIndex, nextImage, prevImage, progress } = useSlides();
+
   const shiftSlide = 100;
 
   return (
     <div className="container-slider">
+      <div className="wrapper-bullets">
+        <BulletsSlides
+          currentIndexSlide={currentIndex}
+          currentProgress={progress}
+        />
+      </div>
       <button
         className={`btn-next ${currentIndex > 0 ? "visible" : "hidden"}`}
         onClick={prevImage}

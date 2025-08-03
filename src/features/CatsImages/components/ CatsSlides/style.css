@@ -36,7 +36,6 @@
   cursor: pointer;
 }
 
-
 .btn-next.visible {
   visibility: visible;
 }
@@ -45,6 +44,12 @@
   visibility: hidden;
 }
 
+
+.wrapper-bullets {
+  position: relative;
+  bottom: 390px;
+  right: 450px;
+}
 
 
 @media (max-width: 768px) {
@@ -61,6 +66,11 @@
   .slide-image {
     width: 300px;
     height: 300px;
+  }
+
+  .wrapper-bullets {
+    bottom: 340px;
+    right: 470px;
   }
 }
 
@@ -79,6 +89,11 @@
     width: 280px;
     height: 280px;
   }
+
+  .wrapper-bullets {
+    bottom: 330px;
+    right: 480px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -95,5 +110,9 @@
   .slide-image {
     width: 250px;
     height: 250px;
+  }
+
+  .wrapper-bullets {
+    bottom: 320px;
   }
 }
