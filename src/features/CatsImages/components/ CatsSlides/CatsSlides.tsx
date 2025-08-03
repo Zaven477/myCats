@@ -1,30 +1,12 @@
-import { useState } from "react";
+import { useSlides } from "./hook";
 import { catsImagesUrl } from "./imagesUrl";
 import "./style.css";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 export const CatsSlides = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentIndex((prev) => {
-      if (prev + 1 < catsImagesUrl.length) {
-        return prev + 1;
-      } else {
-        return prev;
-      }
-    });
-  };
-
-  const prevImage = () => {
-    setCurrentIndex((prev) => {
-      if (prev - 1 < catsImagesUrl.length && prev - 1 > 0) {
-        return prev - 1;
-      } else {
-        return 0;
-      }
-    });
-  };
+  const { currentIndex, nextImage, prevImage } = useSlides();
+  
+  const shiftSlide = 100;
 
   return (
     <div className="container-slider">
@@ -37,7 +19,7 @@ export const CatsSlides = () => {
       <div className="slides-container">
         <div
           className="slides-wrapper"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          style={{ transform: `translateX(-${currentIndex * shiftSlide}%)` }}
         >
           {catsImagesUrl.map((cat) => (
             <img src={cat.url} key={cat.id} className="slide-image" />
