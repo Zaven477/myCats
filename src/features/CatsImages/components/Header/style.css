@@ -43,15 +43,59 @@ body {
   color: rgba(33, 150, 243, 1);
 }
 
+@media (max-width: 480px) {
+  .text {
+    width: 80px;
+  }
+
+  .header {
+    height: 64px;
+  }
+
+  .buttons {
+    padding: 0 5px;
+  }
+
+  .tabs {
+    gap: 10px;
+  }
+}
+
 @media (max-width: 430px) {
   .buttons {
-    padding: 24px 8px;
+    padding: 24px 5px;
+  }
+
+  .tabs {
+    gap: 8px;
   }
 }
 
 @media (max-width: 400px) {
   .buttons {
-    padding: 24px 4px;
-    font-size: 12px;
+    padding: 24px 8px;
+  }
+
+  .text {
+    width: 70px;
+  }
+
+  .header {
+    height: 75px;
   }
 }
+
+@media (max-width: 380px) {
+  .buttons {
+    padding: 24px 4px;
+  }
+
+  .text {
+    width: 70px;
+  }
+
+  .header {
+    height: 75px;
+  }
+}
+

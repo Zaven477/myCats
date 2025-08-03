@@ -7,11 +7,11 @@ export const BulletsSlides = ({ currentIndexSlide, currentProgress }: TSlidesBul
     <div className="container-bullets">
       {currentProgress.map((prog, index) =>
         index === currentIndexSlide ? (
-          <div className="bulletActive">
+          <div className="bulletActive" key={index}>
             <div className="bulletProgress" style={{ width: `${prog}%` }}></div>
           </div>
         ) : (
-          <div className="bullet"></div>
+          <div className="bullet" key={index}></div>
         )
       )}
     </div>
