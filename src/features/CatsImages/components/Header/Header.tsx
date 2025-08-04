@@ -1,22 +1,19 @@
 import "./style.css";
 import type { HeaderProps } from "./types";
-import { useLogout } from "./hook";
+import { useLogout } from "./useLogout";
 import { DisplayTabs } from "./DisplayTabs/DisplayTabs";
 import { FiMenu } from "react-icons/fi";
-import { useState } from "react";
+import { useOpenMenuDropdown } from "./useOpenMenuDropdown";
 
 export const Header = ({ tabs, activeTab, setTab }: HeaderProps) => {
-  const [isOpen, setOpen] = useState(false);
   const { logout } = useLogout();
-
-  const openDropdown = () => {
-    setOpen((prev) => !prev);
-  };
+  const {isOpen, setOpen, openMenuDropdown} = useOpenMenuDropdown();
+  
 
   return (
     <header className="header">
       <div className="mobile-menu-button">
-        <FiMenu size={24} color="white" onClick={openDropdown} />
+        <FiMenu size={24} color="white" onClick={openMenuDropdown} />
         {isOpen && (
           <div className="btn-menu">
             <DisplayTabs tabs={tabs} activeTab={activeTab} setTab={setTab} setOpen={setOpen}/>
