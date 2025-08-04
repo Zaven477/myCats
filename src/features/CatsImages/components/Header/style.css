@@ -75,6 +75,6 @@ body {
   }
 
   .btn-logout {
-    width: 140px;
+    min-width: 70px;
   }
 }
