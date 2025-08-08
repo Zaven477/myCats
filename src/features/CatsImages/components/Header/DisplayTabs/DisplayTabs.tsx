@@ -13,7 +13,7 @@ const ListSections = ({
   return (
     <ul>
       {tabs.map((tab) => (
-        <li key={tab.id}>
+        <li key={tab.id} className="list-sections">
           <button
             className={`buttons level-${depth} ${
               tab.id === activeTab ? "active" : ""

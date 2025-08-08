@@ -75,3 +75,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.list-sections {
+  list-style: none;
+}
