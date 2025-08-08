@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useOpenMenuDropdown = () => {
   const [isOpen, setOpen] = useState(false);
@@ -7,5 +7,18 @@ export const useOpenMenuDropdown = () => {
     setOpen((prev) => !prev);
   };
 
-  return {isOpen, setOpen, openMenuDropdown}
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    }
+
+  }, [isOpen]);
+
+  return { isOpen, setOpen, openMenuDropdown };
 };

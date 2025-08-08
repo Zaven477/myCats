@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import { useAppDispatch } from "../../store/reducer/hook";
 import { clearCatsState } from "../../store/actions";
 import { useCallback } from "react";
+import { URL_AUTORIZATION } from "../../../../constants";
 
 export const useLogout = () => {
   const dispatch = useAppDispatch();
@@ -9,7 +10,7 @@ export const useLogout = () => {
 
   const logout = useCallback(() => {
     dispatch(clearCatsState());
-    navigate("/");
+    navigate(URL_AUTORIZATION);
     localStorage.removeItem("isAuth");
   }, [dispatch, navigate]);
 

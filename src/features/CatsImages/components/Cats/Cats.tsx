@@ -1,28 +1,24 @@
-import type { TCats } from "./types";
 import "./styles.css";
 import { useCats } from "./useCats";
 import { ClipLoader } from "react-spinners";
 import { FavoriteIcons } from "../FavoriteIcons/FavoriteIcons";
 import { COUNT_IMAGES } from "../../../../constants";
 import { FaArrowCircleUp } from "react-icons/fa";
-import { CatsSlides } from "../ CatsSlides/CatsSlides";
+import { useOutletContext } from "react-router";
+import type { useFavoritesCats } from "./useFavoritesCats";
+import { useRedirect } from "./useRedirect";
 
-export const Cats = ({
-  activeTab,
-  addFavorites,
-  removeFavorites,
-  favoritesCats,
-  isFavorites,
-}: TCats) => {
+export const Cats = () => {
+  const { addFavorites, favoritesCats, isFavoritesCats, removeFavoritesCats } =
+    useOutletContext<ReturnType<typeof useFavoritesCats>>();
   const { cats, loading, error, nextImages, handleScrollToTop } = useCats();
+  const {valueQueryParams} = useRedirect();
 
-  const tabs = { all: cats, favorites: favoritesCats, slidesCats: <CatsSlides />};
+  const tab = valueQueryParams === "favorites" ? "favorites" : "all";
 
-  if(activeTab === 'slidesCats') {
-    return tabs.slidesCats
-  }
+  const tabs = { all: cats, favorites: favoritesCats };
 
-  const imagesCats = tabs[activeTab];
+  const imagesCats = tabs[tab];
 
   if (loading && imagesCats.length === 0) {
     return (
@@ -49,21 +45,21 @@ export const Cats = ({
               <div
                 className="container-image"
                 onClick={
-                  isFavorites(cat.id)
-                    ? () => removeFavorites(cat.id)
+                  isFavoritesCats(cat.id)
+                    ? () => removeFavoritesCats(cat.id)
                     : () => addFavorites(cat)
                 }
               >
                 <img key={cat.id} src={cat.url} className="card-image" />
                 <div className="icon-overlay">
-                  <FavoriteIcons isFavorite={isFavorites(cat.id)} />
+                  <FavoriteIcons isFavorite={isFavoritesCats(cat.id)} />
                 </div>
               </div>
             </li>
           </ul>
         ))}
       </div>
-      {activeTab === "all" && imagesCats.length > 0 && (
+      {tab === "all" && imagesCats.length > 0 && (
         <div className="button-container">
           <button
             className="button-pagination"

@@ -7,21 +7,22 @@ import { useOpenMenuDropdown } from "./useOpenMenuDropdown";
 
 export const Header = ({ tabs, activeTab, setTab }: HeaderProps) => {
   const { logout } = useLogout();
-  const {isOpen, setOpen, openMenuDropdown} = useOpenMenuDropdown();
-  
+  const { isOpen, openMenuDropdown } = useOpenMenuDropdown();
 
   return (
     <header className="header">
-      <div className="mobile-menu-button">
-        <FiMenu size={24} color="white" onClick={openMenuDropdown} />
+      <div className="tabs">
+        <FiMenu
+          size={30}
+          color="white"
+          onClick={openMenuDropdown}
+          className="icon-menu"
+        />
         {isOpen && (
-          <div className="btn-menu">
-            <DisplayTabs tabs={tabs} activeTab={activeTab} setTab={setTab} setOpen={setOpen}/>
+          <div className="tabs-menu">
+            <DisplayTabs tabs={tabs} activeTab={activeTab} setTab={setTab} />
           </div>
         )}
-      </div>
-      <div className="tabs">
-        <DisplayTabs tabs={tabs} activeTab={activeTab} setTab={setTab} />
       </div>
       <button className="btn-logout" onClick={logout}>
         Выйти
