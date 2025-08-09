@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import type { ValuesFields } from "./types";
-import { sendData } from "../../api/formData";
+import { sendData } from "../../api/SendData";
 import { useCallback, useEffect, useState } from "react";
 import { URL_CATS } from "../../../../constants";
 

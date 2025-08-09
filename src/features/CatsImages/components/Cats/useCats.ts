@@ -10,7 +10,7 @@ export const useCats = () => {
   const loading = useAppSelector(loadingCats);
   const error = useAppSelector(errorCats);
 
-  const handleScrollToTop = useCallback(() => {
+  const scrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
@@ -25,5 +25,5 @@ export const useCats = () => {
     dispatch(getImagesCats(COUNT_IMAGES));
   }, [dispatch]);
 
-  return { cats, loading, error, nextImages, handleScrollToTop };
+  return { cats, loading, error, nextImages, scrollToTop };
 };

@@ -2,12 +2,15 @@ import {
   URL_CATS,
   URL_CATS_FAVORITES,
   URL_CATS_SLIDES,
-} from "../../../../constants";
-import type { CurrentCats } from "../Cats/types";
-import type { Tab } from "../Header/types";
+} from "../../../../../constants";
+import { useAppSelector } from "../../../store/reducer/hook";
+import { currentFavoritesCats } from "../../../store/selectors";
+import type { Tab } from "../types";
 
-export const tabsMenu = (favoritesCats: CurrentCats[]): Tab[] => {
-  return [
+export const useTabs = () => {
+  const favoritesCats = useAppSelector(currentFavoritesCats);
+
+  const tabs: Tab[] = [
     {
       id: "cats",
       label: "Котики",
@@ -32,4 +35,6 @@ export const tabsMenu = (favoritesCats: CurrentCats[]): Tab[] => {
       path: `${URL_CATS_SLIDES}`,
     },
   ];
+
+  return {tabs}
 };

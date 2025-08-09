@@ -36,6 +36,12 @@ body {
   background-color: rgba(30, 136, 229, 1);
   height: calc(100vh - 64px);
   overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.tabs-menu.open {
+  transform: translateX(0);
 }
 
 .buttons {

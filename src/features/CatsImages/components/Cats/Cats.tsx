@@ -4,15 +4,13 @@ import { ClipLoader } from "react-spinners";
 import { FavoriteIcons } from "../FavoriteIcons/FavoriteIcons";
 import { COUNT_IMAGES } from "../../../../constants";
 import { FaArrowCircleUp } from "react-icons/fa";
-import { useOutletContext } from "react-router";
-import type { useFavoritesCats } from "./useFavoritesCats";
+import { useFavoritesCats } from "./useFavoritesCats";
 import { useRedirect } from "./useRedirect";
 
 export const Cats = () => {
-  const { addFavorites, favoritesCats, isFavoritesCats, removeFavoritesCats } =
-    useOutletContext<ReturnType<typeof useFavoritesCats>>();
-  const { cats, loading, error, nextImages, handleScrollToTop } = useCats();
-  const {valueQueryParams} = useRedirect();
+  const { addFavorites, favoritesCats, isFavoritesCats, removeFavoritesCats } = useFavoritesCats();
+  const { cats, loading, error, nextImages, scrollToTop } = useCats();
+  const { valueQueryParams } = useRedirect();
 
   const tab = valueQueryParams === "favorites" ? "favorites" : "all";
 
@@ -73,7 +71,7 @@ export const Cats = () => {
         <FaArrowCircleUp
           size={40}
           className="icon-up"
-          onClick={handleScrollToTop}
+          onClick={scrollToTop}
         />
       )}
     </div>

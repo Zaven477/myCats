@@ -8,14 +8,20 @@ export type Tab = {
   path: string;
 };
 
-export type HeaderProps = {
+export type DisplayMenuProps = {
   tabs: Tab[];
   activeTab: TabType;
-  setTab: (tab: TabType) => void;
+  setIsOpen?: (arg: boolean) => void;
+  selectedTab: Record<string, boolean>;
+  selectTab: (id: TabType, path: string, children?: Tab[]) => void;
 };
 
-export type TPropsListSections = {
-  selectTab: (id: TabType, path: string) => void;
-  isOpen: Record<string, boolean>;
+export type Depth = {
   depth: number;
-};
+}
+
+export type ListSectionsProps = Pick<
+  DisplayMenuProps,
+  "tabs" | "activeTab" | "setIsOpen" | "selectedTab" | "selectTab"
+> & Depth
+

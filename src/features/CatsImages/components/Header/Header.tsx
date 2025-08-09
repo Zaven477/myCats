@@ -1,13 +1,14 @@
 import "./style.css";
-import type { HeaderProps } from "./types";
 import { useLogout } from "./useLogout";
-import { DisplayTabs } from "./DisplayTabs/DisplayTabs";
+import { DisplayMenu } from "./DisplayMenu/DisplayMenu";
 import { FiMenu } from "react-icons/fi";
-import { useOpenMenuDropdown } from "./useOpenMenuDropdown";
+import { useTabs } from "./DisplayMenu/useTabs";
+import { useOpenMenu } from "./useOpenMenu";
 
-export const Header = ({ tabs, activeTab, setTab }: HeaderProps) => {
+export const Header = () => {
   const { logout } = useLogout();
-  const { isOpen, openMenuDropdown } = useOpenMenuDropdown();
+  const { isOpenMenu, setOpenMenu, openMenu, activeTab, selectedTab, selectTab } = useOpenMenu();
+  const {tabs} = useTabs();
 
   return (
     <header className="header">
@@ -15,14 +16,18 @@ export const Header = ({ tabs, activeTab, setTab }: HeaderProps) => {
         <FiMenu
           size={30}
           color="white"
-          onClick={openMenuDropdown}
+          onClick={openMenu}
           className="icon-menu"
         />
-        {isOpen && (
-          <div className="tabs-menu">
-            <DisplayTabs tabs={tabs} activeTab={activeTab} setTab={setTab} />
-          </div>
-        )}
+        <div className={`tabs-menu ${isOpenMenu ? "open" : ""}`}>
+          <DisplayMenu
+            tabs={tabs}
+            activeTab={activeTab}
+            setIsOpen={setOpenMenu}
+            selectedTab={selectedTab}
+            selectTab={selectTab}
+          />
+        </div>
       </div>
       <button className="btn-logout" onClick={logout}>
         Выйти

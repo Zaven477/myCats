@@ -1,15 +1,14 @@
-import { useState } from "react";
-import type { HeaderProps, TabType, TPropsListSections } from "../types";
-import { useNavigate } from "react-router";
+import type { DisplayMenuProps, ListSectionsProps } from "../types";
 import { HiChevronDown } from "react-icons/hi";
 
 const ListSections = ({
   tabs,
   activeTab,
   selectTab,
-  isOpen,
+  selectedTab,
+  setIsOpen,
   depth,
-}: Pick<HeaderProps, "tabs" | "activeTab"> & TPropsListSections) => {
+}: ListSectionsProps) => {
   return (
     <ul>
       {tabs.map((tab) => (
@@ -19,7 +18,7 @@ const ListSections = ({
               tab.id === activeTab ? "active" : ""
             }`}
             key={tab.id}
-            onClick={() => selectTab(tab.id, tab.path)}
+            onClick={() => selectTab(tab.id, tab.path, tab.children)}
           >
             <div className="container-text-icon">
               <div>
@@ -28,12 +27,13 @@ const ListSections = ({
               <div>{tab.children && <HiChevronDown size={20} />}</div>
             </div>
           </button>
-          {isOpen[tab.id] && tab.children && (
+          {selectedTab[tab.id] && tab.children && (
             <ListSections
               tabs={tab.children}
               activeTab={activeTab}
               selectTab={selectTab}
-              isOpen={isOpen}
+              selectedTab={selectedTab}
+              setIsOpen={setIsOpen}
               depth={depth + 1}
             />
           )}
@@ -43,23 +43,21 @@ const ListSections = ({
   );
 };
 
-export const DisplayTabs = ({ tabs, activeTab, setTab }: HeaderProps) => {
-  const [isOpen, setOpen] = useState<Record<string, boolean>>({});
-  const navigate = useNavigate();
-
-  const selectTab = (id: TabType, path: string) => {
-    setTab(id);
-    setOpen((prev) => ({ ...prev, [id]: !prev[id] }));
-    navigate(path);
-  };
-
+export const DisplayMenu = ({
+  tabs,
+  activeTab,
+  setIsOpen,
+  selectedTab,
+  selectTab,
+}: DisplayMenuProps) => {
   return (
     <div>
       <ListSections
         tabs={tabs}
         activeTab={activeTab}
         selectTab={selectTab}
-        isOpen={isOpen}
+        selectedTab={selectedTab}
+        setIsOpen={setIsOpen}
         depth={0}
       />
     </div>
