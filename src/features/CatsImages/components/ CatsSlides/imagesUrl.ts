@@ -1,11 +1,11 @@
 export const catsImagesUrl = [
-  { id: 1, url: "https://cdn2.thecatapi.com/images/1se.jpg" },
-  { id: 2, url: "https://cdn2.thecatapi.com/images/26c.jpg" },
+  { id: 1, url: "/animal-7901464_1920.jpg" },
+  { id: 2, url: "/animal-8165466_1920.jpg" },
   {
     id: 3,
-    url: "https://30.media.tumblr.com/tumblr_krvxbfFEsf1qa9hjso1_1280.png",
+    url: "/cat-2195538_1920.jpg",
   },
-  { id: 4, url: "https://cdn2.thecatapi.com/images/5gu.jpg" },
-  { id: 5, url: "https://cdn2.thecatapi.com/images/5jm.jpg" },
-  { id: 6, url: "https://cdn2.thecatapi.com/images/751.jpg" },
+  { id: 4, url: "/cat-4256821_1920.jpg" },
+  { id: 5, url: "/cat-8198720_1920.jpg" },
+  { id: 6, url: "/kitten-3442257_1920.jpg" },
 ];
