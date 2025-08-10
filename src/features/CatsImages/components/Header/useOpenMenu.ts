@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import type { Tab, TabType } from "./types";
 import { Tabs } from "../Layout/types";
 import { useNavigate } from "react-router";
@@ -9,20 +9,23 @@ export const useOpenMenu = () => {
   const [selectedTab, setSelectedTab] = useState<Record<string, boolean>>({});
   const navigate = useNavigate();
 
-  const selectTab = (id: TabType, path: string, children?: Tab[]) => {
-    setActiveTab(id);
-    setSelectedTab((prev) => ({ ...prev, [id]: !prev[id] }));
-    navigate(path);
-    if(children) {
-      setOpenMenu(true);
-    } else {
-      setOpenMenu(false);
-    }
-  };
+  const selectTab = useCallback(
+    (id: TabType, path: string, children?: Tab[]) => {
+      setActiveTab(id);
+      setSelectedTab((prev) => ({ ...prev, [id]: !prev[id] }));
+      navigate(path);
+      if (children) {
+        setOpenMenu(true);
+      } else {
+        setOpenMenu(false);
+      }
+    },
+    [navigate]
+  );
 
-  const openMenu = () => {
+  const openMenu = useCallback(() => {
     setOpenMenu((prev) => !prev);
-  };
+  }, []);
 
   useEffect(() => {
     if (isOpenMenu) {

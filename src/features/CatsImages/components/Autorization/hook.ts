@@ -21,9 +21,9 @@ export const useAutorization = () => {
     [navigate]
   );
 
-  const showPassword = () => {
+  const showPassword = useCallback(() => {
     setIsShowPassword((prev) => !prev);
-  };
+  }, []);
 
   useEffect(() => {
     const isAuth = localStorage.getItem("isAuth") === "true";
