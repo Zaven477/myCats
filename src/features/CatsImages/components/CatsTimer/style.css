@@ -1,0 +1,31 @@
+.timer {
+  font-size: 150px;
+  color: white;
+}
+
+.btn-start-pause {
+  width: 330px;
+  height: 40px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  background: rgba(30, 136, 229, 1);
+  color: white;
+  border-radius: 3px;
+}
+
+.timer-container {
+  background-image: url("/cat-2143332_1920.jpg");
+  background-position: center;
+  height: calc(100vh - 64px);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.currentTime {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

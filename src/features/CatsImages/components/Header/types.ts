@@ -1,4 +1,4 @@
-export type TabType = "cats" | "all" | "favorites" | "slidesCats";
+export type TabType = "cats" | "all" | "favorites" | "slidesCats" | "catsTimer";
 
 export type Tab = {
   id: TabType;
@@ -18,10 +18,10 @@ export type DisplayMenuProps = {
 
 export type Depth = {
   depth: number;
-}
+};
 
 export type ListSectionsProps = Pick<
   DisplayMenuProps,
   "tabs" | "activeTab" | "setIsOpen" | "selectedTab" | "selectTab"
-> & Depth
-
+> &
+  Depth;

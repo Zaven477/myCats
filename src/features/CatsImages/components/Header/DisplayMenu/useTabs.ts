@@ -2,6 +2,7 @@ import {
   URL_CATS,
   URL_CATS_FAVORITES,
   URL_CATS_SLIDES,
+  URL_TIMER,
 } from "../../../../../constants";
 import { useAppSelector } from "../../../store/reducer/hook";
 import { currentFavoritesCats } from "../../../store/selectors";
@@ -33,6 +34,11 @@ export const useTabs = () => {
       id: "slidesCats",
       label: "Слайды",
       path: `${URL_CATS_SLIDES}`,
+    },
+    {
+      id: "catsTimer",
+      label: "Таймер",
+      path: `${URL_TIMER}`,
     },
   ];
 
