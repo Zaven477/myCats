@@ -7,3 +7,4 @@ export const URL_CATS_FAVORITES = "/cats?tab=favorites";
 export const URL_CATS_SLIDES = "/cats/slides";
 export const URL_AUTORIZATION = '/';
 export const URL_TIMER = '/timer'
+export const URL_COMMENTS = '/comments'

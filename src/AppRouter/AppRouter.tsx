@@ -6,6 +6,7 @@ import { CatsSlides } from "../features/CatsImages/components/ CatsSlides/CatsSl
 import { PrivateRoute } from "./PrivateRoute";
 import { NotFoundPage } from "./NotFoundPage";
 import { CatsTimer } from "../features/CatsImages/components/CatsTimer/CatsTimer";
+import { CurrentsComments } from "../features/CatsImages/components/CurrentsComments/CurrentsComments";
 
 export const AppRouter = () => {
   return (
@@ -24,7 +25,8 @@ export const AppRouter = () => {
             <Route path="/cats/slides" element={<CatsSlides />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
-          <Route path="/timer" element={<CatsTimer />}/>
+          <Route path="/timer" element={<CatsTimer />} />
+          <Route path="/comments" element={<CurrentsComments />}/>
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

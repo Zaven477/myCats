@@ -1,0 +1,56 @@
+.container-text {
+  padding: 20px 20px 0 20px;
+  font-size: 20px;
+}
+
+.currentComments {
+  color: green;
+  margin-bottom: 20px;
+}
+
+.containerPages {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.btnPagination {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnPagination.active {
+  background: #dcdcdc;
+  color: red;
+  flex-shrink: 0;
+}
+
+.iconRight.hidden {
+  visibility: hidden;
+}
+
+.iconLeft.hidden {
+  visibility: hidden;
+}
+
+.btnPagination.no-pointer {
+  cursor: default;
+}
+
+
+.error-comments {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: red;
+}
+

@@ -1,4 +1,10 @@
-export type TabType = "cats" | "all" | "favorites" | "slidesCats" | "catsTimer";
+export type TabType =
+  | "cats"
+  | "all"
+  | "favorites"
+  | "slidesCats"
+  | "catsTimer"
+  | "comments";
 
 export type Tab = {
   id: TabType;
