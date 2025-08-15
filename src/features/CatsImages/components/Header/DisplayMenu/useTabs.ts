@@ -3,6 +3,7 @@ import {
   URL_CATS_FAVORITES,
   URL_CATS_SLIDES,
   URL_COMMENTS,
+  URL_FILES,
   URL_TIMER,
 } from "../../../../../constants";
 import { useAppSelector } from "../../../store/reducer/hook";
@@ -41,12 +42,17 @@ export const useTabs = () => {
       label: "Таймер котиков",
       path: `${URL_TIMER}`,
     },
-     {
+    {
       id: "comments",
       label: "Комментарии",
       path: `${URL_COMMENTS}`,
     },
+    {
+      id: "files",
+      label: "Загрузка файлов",
+      path: `${URL_FILES}`,
+    },
   ];
 
-  return {tabs}
+  return { tabs };
 };

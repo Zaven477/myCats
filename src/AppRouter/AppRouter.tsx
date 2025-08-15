@@ -7,6 +7,7 @@ import { PrivateRoute } from "./PrivateRoute";
 import { NotFoundPage } from "./NotFoundPage";
 import { CatsTimer } from "../features/CatsImages/components/CatsTimer/CatsTimer";
 import { CurrentsComments } from "../features/CatsImages/components/CurrentsComments/CurrentsComments";
+import { CurrentsFiles } from "../features/CatsImages/components/CurrentsFiles/CurrentsFiles";
 
 export const AppRouter = () => {
   return (
@@ -27,6 +28,7 @@ export const AppRouter = () => {
           </Route>
           <Route path="/timer" element={<CatsTimer />} />
           <Route path="/comments" element={<CurrentsComments />}/>
+          <Route path="/files" element={<CurrentsFiles />}/>
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
