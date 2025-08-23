@@ -122,6 +122,16 @@
     left: 140px;
     font-size: 12px;
   }
+
+  .container-shadow {
+    position: absolute;
+    width: 300px;
+  }
+
+  .wrapper-profile {
+    position: relative;
+    width: 250px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -130,14 +140,26 @@
     left: 100px;
     font-size: 12px;
   }
-}
 
-@media (max-width: 380px) {
   .container-shadow {
+    position: absolute;
     width: 300px;
   }
 
   .wrapper-profile {
+    position: relative;
+    width: 250px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container-shadow {
+    position: absolute;
+    width: 300px;
+  }
+
+  .wrapper-profile {
+    position: relative;
     width: 250px;
   }
 
