@@ -83,12 +83,12 @@
 
 @media (max-width: 390px) {
   .editModalProfile {
-    width: 330px;
+    width: 300px;
     height: 440px;
   }
 
   .containerInputs {
-    width: 330px;
+    width: 300px;
   }
 
   .inputModal {
