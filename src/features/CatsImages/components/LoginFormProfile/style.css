@@ -122,6 +122,10 @@
     left: 140px;
     font-size: 12px;
   }
+
+  .container-shadow {
+    width: 300px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -129,6 +133,10 @@
     width: 240px;
     left: 100px;
     font-size: 12px;
+  }
+
+  .container-shadow {
+    width: 300px;
   }
 }
 
