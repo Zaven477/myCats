@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 350px;
+  max-width: 350px;
   height: 100%;
   justify-content: center;
   margin: auto;
@@ -43,9 +43,9 @@
 }
 
 .container-shadow {
-  border: 1px solid black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  width: 450px;
+  max-width: 450px;
   height: 350px;
   position: absolute;
   left: 50%;
@@ -78,14 +78,6 @@
   justify-content: center;
 }
 
-.btnEye {
-  width: 30px;
-  position: relative;
-  left: 310px;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
 
 @media (max-width: 480px) {
   .location {
@@ -96,11 +88,11 @@
 
 @media (max-width: 470px) {
   .container-shadow {
-    width: 350px;
+    max-width: 350px;
   }
 
   .wrapper-profile {
-    width: 300px;
+    max-width: 300px;
   }
 
   .btnEye {
@@ -134,11 +126,11 @@
 
 @media (max-width: 380px) {
   .container-shadow {
-    width: 300px;
+    max-width: 300px;
   }
 
   .wrapper-profile {
-    width: 250px;
+    max-width: 250px;
   }
 
   .btnEye {
