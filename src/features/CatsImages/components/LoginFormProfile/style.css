@@ -96,7 +96,7 @@
 
 @media (max-width: 470px) {
   .container-shadow {
-    width: 350px;
+    max-width: 350px;
   }
 
   .wrapper-profile {
@@ -134,7 +134,7 @@
 
 @media (max-width: 380px) {
   .container-shadow {
-    width: 300px;
+    max-width: 300px;
   }
 
   .wrapper-profile {
