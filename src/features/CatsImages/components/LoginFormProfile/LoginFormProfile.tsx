@@ -28,6 +28,7 @@ export const LoginFormProfile = () => {
                   <input
                     type="login"
                     name="login"
+                    placeholder=""
                     className={`input-login ${
                       props.errors.login ? "borderLogin" : ""
                     }`}
@@ -39,6 +40,7 @@ export const LoginFormProfile = () => {
                     <input
                       type={isShowPassword ? "text" : "password"}
                       name="password"
+                      placeholder=""
                       className={`input-password ${
                         props.errors.password ? "borderPassword" : ""
                       }`}
