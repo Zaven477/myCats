@@ -122,6 +122,14 @@
     left: 140px;
     font-size: 12px;
   }
+
+  .container-shadow {
+    max-width: 300px;
+  }
+
+  .wrapper-profile {
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 390px) {
@@ -130,15 +138,23 @@
     left: 100px;
     font-size: 12px;
   }
+
+  .container-shadow {
+    max-width: 300px;
+  }
+
+  .wrapper-profile {
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 380px) {
   .container-shadow {
-    width: 300px;
+    max-width: 300px;
   }
 
   .wrapper-profile {
-    width: 250px;
+    max-width: 250px;
   }
 
   .btnEye {
