@@ -10,7 +10,7 @@ export const useCurrentProfile = () => {
       const parsed = JSON.parse(saved);
       setCurrentUser(parsed);
     }
-  }, [currentUser]);
+  }, []);
 
   return { currentUser };
 };
