@@ -20,11 +20,12 @@
 }
 
 .input-password {
-  flex: 1;
   height: 34px;
-  padding: 0 35px 0 10px;
+  font-size: 15px;
+  padding: 0 10px;
+  position: absolute;
+  width: 100%;
   box-sizing: border-box;
-  position: relative;
 }
 
 .input-password.borderPassword {
@@ -42,7 +43,7 @@
 }
 
 .container-shadow {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid black;
   border-radius: 5px;
   width: 450px;
   height: 350px;
@@ -73,15 +74,16 @@
 
 .wrapperInput {
   display: flex;
-  align-items: center;
-  position: relative;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .btnEye {
-  position: absolute;
-  right: 10px;
-  background: none;
+  width: 30px;
+  position: relative;
+  left: 310px;
   border: none;
+  background: none;
   cursor: pointer;
 }
 
