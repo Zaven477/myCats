@@ -5,7 +5,8 @@ export type TabType =
   | "slidesCats"
   | "catsTimer"
   | "comments"
-  | "files";
+  | "files"
+  | "loginProfile";
 
 export type Tab = {
   id: TabType;

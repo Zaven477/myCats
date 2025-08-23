@@ -4,6 +4,7 @@ import {
   URL_CATS_SLIDES,
   URL_COMMENTS,
   URL_FILES,
+  URL_LOGIN_PROFILE,
   URL_TIMER,
 } from "../../../../../constants";
 import { useAppSelector } from "../../../store/reducer/hook";
@@ -51,6 +52,11 @@ export const useTabs = () => {
       id: "files",
       label: "Загрузка файлов",
       path: `${URL_FILES}`,
+    },
+    {
+      id: "loginProfile",
+      label: "Личный кабинет",
+      path: `${URL_LOGIN_PROFILE}`,
     },
   ];
 

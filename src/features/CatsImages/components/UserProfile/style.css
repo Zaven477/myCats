@@ -1,0 +1,109 @@
+.account {
+  display: flex;
+  justify-content: center;
+}
+
+.account.colorAccount {
+  color: white;
+}
+
+.tabsProfile {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btnProfile {
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid blue;
+  border-radius: 3px;
+  background-color: #00bfff;
+  color: white;
+}
+
+.btnProfile.active {
+  background: rgba(33, 150, 243, 1);
+}
+
+.btnLogOut {
+  width: 100px;
+  border: 1px solid blue;
+  border-radius: 3px;
+  background-color: white;
+  color: rgba(33, 150, 243, 1);
+  cursor: pointer;
+}
+
+.wrapperCurrentProfile {
+  border: 1px solid #d3d3d3;
+  width: 650px;
+  padding: 20px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapperCurrentProfile.theme {
+  background: black;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 730px) {
+  .wrapperCurrentProfile {
+    width: 550px;
+  }
+}
+
+@media (max-width: 630px) {
+  .wrapperCurrentProfile {
+    width: 450px;
+  }
+}
+
+@media (max-width: 530px) {
+  .wrapperCurrentProfile {
+    width: 350px;
+  }
+}
+
+@media (max-width: 430px) {
+  .wrapperCurrentProfile {
+    width: 300px;
+  }
+
+  .btnProfile {
+    font-size: 12px;
+  }
+
+  .btnLogOut {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 340px) {
+  .wrapperCurrentProfile {
+    width: 270px;
+  }
+
+  .btnProfile {
+    font-size: 11px;
+  }
+
+  .btnLogOut {
+    font-size: 10px;
+  }
+}

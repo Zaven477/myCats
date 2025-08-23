@@ -1,0 +1,151 @@
+.wrapper-profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+  gap: 15px;
+}
+
+.input-login {
+  height: 30px;
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+.input-email.borderLogin {
+  border: 1px solid red;
+}
+
+.input-password {
+  height: 34px;
+  font-size: 15px;
+  padding: 0 10px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-password.borderPassword {
+  border: 1px solid red;
+}
+
+.btnSubmitProfile {
+  height: 35px;
+  background: none;
+  background-color: rgba(33, 150, 243, 1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.container-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 450px;
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-profile {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.error-login {
+  color: red;
+}
+
+.error-password {
+  color: red;
+}
+
+.location {
+  top: 80px;
+}
+
+.wrapperInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btnEye {
+  width: 30px;
+  position: relative;
+  left: 310px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .location {
+    width: 300px;
+    left: 140px;
+  }
+}
+
+@media (max-width: 470px) {
+  .container-shadow {
+    width: 350px;
+  }
+
+  .wrapper-profile {
+    width: 300px;
+  }
+
+  .btnEye {
+    left: 265px;
+  }
+}
+
+@media (max-width: 450px) {
+  .location {
+    width: 270px;
+    left: 140px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 420px) {
+  .location {
+    width: 240px;
+    left: 140px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .location {
+    width: 240px;
+    left: 100px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container-shadow {
+    width: 300px;
+  }
+
+  .wrapper-profile {
+    width: 250px;
+  }
+
+  .btnEye {
+    left: 215px;
+  }
+
+  .text-profile {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,122 @@
+.editModalProfile {
+  height: 390px;
+  width: 370px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.textEdit {
+  font-size: 23px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.name {
+  margin-top: 20px;
+  padding-right: 290px;
+}
+
+.login {
+  margin-top: 20px;
+  padding-right: 280px;
+}
+
+.password {
+  margin-top: 20px;
+  padding-right: 270px;
+}
+
+.inputModal {
+  height: 30px;
+  width: 300px;
+  font-size: 15px;
+  padding: 0 10px;
+}
+
+.containerInputs {
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonsModal {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 22px;
+  gap: 10px;
+}
+
+.btn-Modal {
+  padding: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+  background: rgba(33, 150, 243, 1);
+  border: none;
+  color: white;
+  border-radius: 3px;
+}
+
+.error-message-name {
+  color: red;
+  padding-right: 70px;
+}
+
+.error-message-login {
+  color: red;
+  padding-right: 18px;
+}
+
+.error-message-password {
+  color: red;
+  padding-right: 5px;
+}
+
+.inputModal.borderInput {
+  border: 1px solid red;
+}
+
+@media (max-width: 390px) {
+  .editModalProfile {
+    width: 330px;
+    height: 440px;
+  }
+
+  .containerInputs {
+    width: 330px;
+  }
+
+  .inputModal {
+    width: 260px;
+  }
+
+  .name {
+    padding-right: 250px;
+  }
+
+  .login {
+    padding-right: 240px;
+  }
+
+  .password {
+    padding-right: 230px;
+  }
+
+  .error-message-name {
+    padding-left: 10px;
+    width: 220px;
+  }
+
+  .error-message-login {
+    padding-left: 22px;
+  }
+
+  .error-message-password {
+    padding-left: 22px;
+  }
+}

@@ -1,0 +1,62 @@
+.text-nameProfile {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.text-nameProfile.color {
+  color: white;
+}
+
+.container-currentProfile {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.borderProfile {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  background: rgba(33, 150, 243, 1);
+  color: white;
+}
+
+.dataProfile {
+  display: flex;
+  gap: 20px;
+}
+
+.dataUser {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.textData {
+  font-size: 17px;
+}
+
+.textData.color {
+  color: white;
+}
+
+.buttons-profile {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.currentButton {
+  height: 30px;
+  padding: 0 10px;
+  background: rgba(33, 150, 243, 1);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}

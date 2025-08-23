@@ -1,0 +1,36 @@
+.text-story {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.text-story.textStoryColor {
+  color: white;
+}
+
+.textInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  border-bottom: 1px solid #D3D3D3;
+  padding-bottom: 5px;
+}
+
+.containerInfo {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.dateStory {
+  font-size: 18px;
+  color: #808080;
+}
+
+.nameStory {
+  font-size: 18px;
+}
+
+.nameStory.textNameStoryColor {
+  color: white;
+}

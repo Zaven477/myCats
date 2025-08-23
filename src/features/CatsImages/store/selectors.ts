@@ -17,3 +17,4 @@ export const selectCommentsState = (state: RootState) => state.comments
 export const selectCurrentsComments = createSelector(selectCommentsState, (state) => state.comments)
 export const loaderComments = createSelector(selectCommentsState, (state) => state.loading)
 export const errorComments = createSelector(selectCommentsState, (state) => state.errors)
+

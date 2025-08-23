@@ -3,32 +3,41 @@ import { Autorization } from "../features/CatsImages/components/Autorization/Aut
 import { Layout } from "../features/CatsImages/components/Layout/Layout";
 import { Cats } from "../features/CatsImages/components/Cats/Cats";
 import { CatsSlides } from "../features/CatsImages/components/ CatsSlides/CatsSlides";
-import { PrivateRoute } from "./PrivateRoute";
+import { PrivateRouteCats, PrivateRouteUser } from "./PrivateRoute";
 import { NotFoundPage } from "./NotFoundPage";
 import { CatsTimer } from "../features/CatsImages/components/CatsTimer/CatsTimer";
 import { CurrentsComments } from "../features/CatsImages/components/CurrentsComments/CurrentsComments";
 import { CurrentsFiles } from "../features/CatsImages/components/CurrentsFiles/CurrentsFiles";
+import { LoginFormProfile } from "../features/CatsImages/components/LoginFormProfile/LoginFormProfile";
+import { UserProfile } from "../features/CatsImages/components/UserProfile/UserProfile";
 
 export const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Autorization />} />
-        <Route
-          element={
-            <PrivateRoute>
-              <Layout />
-            </PrivateRoute>
-          }
-        >
-          <Route path="/cats">
-            <Route index element={<Cats />} />
-            <Route path="/cats/slides" element={<CatsSlides />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
+        <Route element={<Layout />}>
+          <Route
+            path="/cats"
+            element={
+              <PrivateRouteCats>
+                <Cats />
+              </PrivateRouteCats>
+            }
+          />
+          <Route path="/cats/slides" element={<CatsSlides />} />
           <Route path="/timer" element={<CatsTimer />} />
-          <Route path="/comments" element={<CurrentsComments />}/>
-          <Route path="/files" element={<CurrentsFiles />}/>
+          <Route path="/comments" element={<CurrentsComments />} />
+          <Route path="/files" element={<CurrentsFiles />} />
+          <Route path="/loginProfile" element={<LoginFormProfile />} />
+          <Route
+            path="/loginProfile/user"
+            element={
+              <PrivateRouteUser>
+                <UserProfile />
+              </PrivateRouteUser>
+            }
+          />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

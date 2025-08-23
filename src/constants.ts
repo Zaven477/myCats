@@ -9,3 +9,7 @@ export const URL_AUTORIZATION = '/';
 export const URL_TIMER = '/timer'
 export const URL_COMMENTS = '/comments'
 export const URL_FILES = '/files'
+export const URL_LOGIN_PROFILE = '/loginProfile';
+export const URL_USER_PROFILE = '/loginProfile/user';
+
+
