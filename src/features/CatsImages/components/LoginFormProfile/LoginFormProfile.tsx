@@ -1,6 +1,7 @@
 import { Formik } from "formik";
 import "./style.css";
 import { validationForm } from "./validation";
+import { ToastContainer } from "react-toastify";
 import { ClipLoader } from "react-spinners";
 import { useLoginFormProfile } from "./useLoginFormProfile";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -61,6 +62,7 @@ export const LoginFormProfile = () => {
           );
         }}
       </Formik>
+      <ToastContainer className="location" />
     </div>
   );
 };
