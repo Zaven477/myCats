@@ -23,7 +23,7 @@
   font-size: 15px;
   padding: 0 10px;
   position: absolute;
-  width: 350px;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -72,18 +72,17 @@
 }
 
 .wrapperInput {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 .btnEye {
-  width: 30px;
-  position: relative;
-  left: 310px;
-  border: none;
-  background: none;
-  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
 }
 
 @media (max-width: 480px) {
