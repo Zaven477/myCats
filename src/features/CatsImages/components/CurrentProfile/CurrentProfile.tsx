@@ -1,13 +1,11 @@
 import "./style.css";
 import type { OpenEditModalProps } from "./types";
-import { useCurrentProfile } from "./useCurrentProfile";
 
 export const CurrentProfile = ({
   onOpenEditModal,
   isChecked,
+  updateUser,
 }: OpenEditModalProps) => {
-  const { currentUser } = useCurrentProfile();
-
   return (
     <div className="container-currentProfile">
       <div>
@@ -21,17 +19,17 @@ export const CurrentProfile = ({
           <div className="dataUser">
             <div>
               <span className={`textData ${isChecked ? "color" : ""}`}>
-                Имя: {currentUser?.name}
+                Имя: {updateUser?.name}
               </span>
             </div>
             <div>
               <span className={`textData ${isChecked ? "color" : ""}`}>
-                Логин: {currentUser?.login}
+                Логин: {updateUser?.login}
               </span>
             </div>
             <div>
               <span className={`textData ${isChecked ? "color" : ""}`}>
-                Пароль: {currentUser?.password}
+                Пароль: {updateUser?.password}
               </span>
             </div>
           </div>

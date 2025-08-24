@@ -7,6 +7,7 @@ import { SettingsProfile } from "../SettingsProfile/SettingsProfile";
 import { EditModal } from "../EditModal/EditModal";
 import { useProfile } from "./useProfile";
 import { useSettingsProfile } from "../SettingsProfile/useSettingsProfile";
+import { useState } from "react";
 
 export const UserProfile = () => {
   const {
@@ -18,6 +19,15 @@ export const UserProfile = () => {
     openEditModal,
   } = useProfile();
   const { changeTheme, isChecked } = useSettingsProfile();
+  const [updateUserProfile, setUpdateUserProfile] = useState(() => {
+    const saved = localStorage.getItem("user");
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      return parsed;
+    } else {
+      return null;
+    }
+  });
 
   return (
     <div>
@@ -43,6 +53,7 @@ export const UserProfile = () => {
           <CurrentProfile
             onOpenEditModal={openEditModal}
             isChecked={isChecked}
+            updateUser={updateUserProfile}
           />
         ) : null}
         {activeTab === tabsProfile.Story ? (
@@ -57,7 +68,10 @@ export const UserProfile = () => {
       </div>
       {isOpenEditModal && (
         <div className="backdrop">
-          <EditModal setOpen={setIsOpenEditModal} />
+          <EditModal
+            setOpen={setIsOpenEditModal}
+            setUpdateUserProfile={setUpdateUserProfile}
+          />
         </div>
       )}
     </div>

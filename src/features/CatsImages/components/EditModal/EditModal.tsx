@@ -4,9 +4,9 @@ import type { OpenModalProps } from "./types";
 import { validationFieldsModal } from "./validationFieldsModal";
 import { useEditModal } from "./useEditModal";
 
-export const EditModal = ({ setOpen }: OpenModalProps) => {
+export const EditModal = ({ setOpen, setUpdateUserProfile }: OpenModalProps) => {
   const initialValuesFieldsModal = { name: "", login: "", password: "" };
-  const { onSubmitForm } = useEditModal({ setOpen });
+  const { onSubmitForm } = useEditModal({ setOpen, setUpdateUserProfile });
 
   return (
     <div className="editModalProfile">

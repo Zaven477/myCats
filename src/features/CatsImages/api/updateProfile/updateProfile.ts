@@ -1,4 +1,4 @@
-import type { ValuesFieldsModal } from "../../components/EditModal/types";
+import type { TUserDataProfile, ValuesFieldsModal } from "../../components/EditModal/types";
 
 const user = {
   name: "Zaven Papikyan",
@@ -10,8 +10,8 @@ const user = {
 const currentUserProfile = new Map();
 currentUserProfile.set("currentUser", user);
 
-export const updateProfile = async (values: ValuesFieldsModal) => {
-  const response = await new Promise((resolve) => {
+export const updateProfile = async (values: ValuesFieldsModal): Promise<TUserDataProfile> => {
+  const response = await new Promise<TUserDataProfile>((resolve) => {
     if (values.name && values.login && values.password) {
       currentUserProfile.get("currentUser").name = values.name;
       currentUserProfile.get("currentUser").login = values.login;
