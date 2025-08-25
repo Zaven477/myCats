@@ -3,10 +3,17 @@ import "./style.css";
 import type { OpenModalProps } from "./types";
 import { validationFieldsModal } from "./validationFieldsModal";
 import { useEditModal } from "./useEditModal";
+import { ClipLoader } from "react-spinners";
 
-export const EditModal = ({ setOpen, setUpdateUserProfile }: OpenModalProps) => {
+export const EditModal = ({
+  setOpen,
+  setUpdateUserProfile,
+}: OpenModalProps) => {
   const initialValuesFieldsModal = { name: "", login: "", password: "" };
-  const { onSubmitForm } = useEditModal({ setOpen, setUpdateUserProfile });
+  const { onSubmitForm, loading } = useEditModal({
+    setOpen,
+    setUpdateUserProfile,
+  });
 
   return (
     <div className="editModalProfile">
@@ -57,7 +64,7 @@ export const EditModal = ({ setOpen, setUpdateUserProfile }: OpenModalProps) => 
                 Отмена
               </button>
               <button className="btn-Modal" type="submit">
-                Сохранить
+                {loading ? <ClipLoader size={25} color="blue" /> : "Сохранить"}
               </button>
             </div>
           </form>

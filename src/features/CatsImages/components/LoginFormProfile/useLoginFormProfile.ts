@@ -13,7 +13,7 @@ export const useLoginFormProfile = () => {
   const handleSubmitForm = useCallback(
     async (values: ProfileValuesFields) => {
       setLoading(true);
-      const response = await sendDataLoginProfile(values);
+      const response = await sendDataLoginProfile(values, null);
       setLoading(false);
       if (typeof response === "object") {
         localStorage.setItem("user", JSON.stringify(response));
