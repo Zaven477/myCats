@@ -60,10 +60,10 @@ export const EditModal = ({
               </div>
             </div>
             <div className="buttonsModal">
-              <button className="btn-Modal" onClick={() => setOpen(false)}>
+              <button className="btn-cancel" onClick={() => setOpen(false)}>
                 Отмена
               </button>
-              <button className="btn-Modal" type="submit">
+              <button className="btn-save" type="submit">
                 {loading ? <ClipLoader size={25} color="blue" /> : "Сохранить"}
               </button>
             </div>
