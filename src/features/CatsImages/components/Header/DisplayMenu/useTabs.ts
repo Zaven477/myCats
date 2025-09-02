@@ -4,6 +4,7 @@ import {
   URL_CATS_SLIDES,
   URL_COMMENTS,
   URL_FILES,
+  URL_LIST_COUNTRIES,
   URL_LOGIN_PROFILE,
   URL_TIMER,
 } from "../../../../../constants";
@@ -57,6 +58,11 @@ export const useTabs = () => {
       id: "loginProfile",
       label: "Личный кабинет",
       path: `${URL_LOGIN_PROFILE}`,
+    },
+     {
+      id: "countries",
+      label: "Список стран",
+      path: `${URL_LIST_COUNTRIES}`,
     },
   ];
 

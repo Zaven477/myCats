@@ -10,6 +10,7 @@ import { CurrentsComments } from "../features/CatsImages/components/CurrentsComm
 import { CurrentsFiles } from "../features/CatsImages/components/CurrentsFiles/CurrentsFiles";
 import { LoginFormProfile } from "../features/CatsImages/components/LoginFormProfile/LoginFormProfile";
 import { UserProfile } from "../features/CatsImages/components/UserProfile/UserProfile";
+import { Countries } from "../features/CatsImages/components/Countries/Countries";
 
 export const AppRouter = () => {
   return (
@@ -38,6 +39,7 @@ export const AppRouter = () => {
               </PrivateRouteUser>
             }
           />
+          <Route path="/countries" element={<Countries />}/>
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
