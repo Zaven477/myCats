@@ -42,7 +42,9 @@ export const ListCountries = ({
             checked={selected.includes(country.id)}
             onChange={() => selectedCountry(country.id)}
           />
-          <Flag code={country.code} className="flagCountry" />
+          <div className="flagWrapper">
+            <Flag code={country.code} className="flagCountry" />
+          </div>
           <div>{country.name}</div>
         </div>
       ))}
