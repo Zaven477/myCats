@@ -64,7 +64,7 @@
   align-items: center;
   gap: 5px;
   font-size: 20px;
-  flex: 1;
+  flex-basis: 160px;
   min-width: 140px;
 }
 
@@ -118,7 +118,15 @@
   color: red;
 }
 
-
 .input-checkbox {
   cursor: pointer;
+}
+
+.borderInputCountries {
+  border: 1px solid red;
+}
+
+.containerInputAddCountries input:focus {
+  outline: none; /* убирает рамку */
+  box-shadow: none; /* убирает свечение */
 }
