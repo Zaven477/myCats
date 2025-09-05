@@ -1,4 +1,102 @@
+/* Контейнер всей страницы */
+.container-countries {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px; /* немного отступов от краёв */
+}
+
+/* Форма добавления страны */
+.containerInputAddCountries {
+  display: flex;
+  flex-wrap: wrap; /* перенос элементов на новую строку */
+  gap: 10px;
+  width: 100%;
+  max-width: 500px; /* для десктопа */
+  box-sizing: border-box;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* инпут занимает доступное место */
+  min-width: 150px; /* минимальная ширина инпута */
+}
+
+.containerInputAddCountries input {
+  width: 100%;
+  height: 30px;
+  font-size: 15px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.btnAddCountries {
+  width: 100px;
+  height: 30px;
+  background: rgba(33, 150, 243, 1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Ошибки в форме */
+.errorMessagecountries {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Список стран */
+.wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
 .container-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  flex: 1 1 150px; /* адаптивная ширина карточки страны */
+  min-width: 140px;
+}
+
+.flagCountry {
+  height: 25px;
+  width: auto;
+}
+
+/* Кнопки управления списком */
+.containerBtnCountries {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.btn-remove,
+.btn-selectAll {
+  width: 100px;
+  height: 30px;
+  background: rgba(33, 150, 243, 1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* .container-name {
   display: flex;
   gap: 5px;
   font-size: 20px;
@@ -251,3 +349,4 @@
     margin-right: 70px;
   }
 }
+ */
