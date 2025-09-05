@@ -46,7 +46,7 @@ export const Countries = () => {
                     props.errors.country ? "borderInputCountries" : ""
                   }`}
                 />
-                <div className="errorMessagecountries">
+                <div className="errorMessageInputcountries">
                   {props.errors.country}
                 </div>
               </div>
