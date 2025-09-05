@@ -38,6 +38,7 @@
   background: rgba(33, 150, 243, 1);
   border: none;
   color: white;
+  font-size: 14px;
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -98,6 +99,7 @@
   border: none;
   cursor: pointer;
   flex-shrink: 0;
+  font-size: 14px;
 }
 
 .loader-countries {
@@ -114,4 +116,9 @@
   transform: translate(-50%, -50%);
   font-size: 18px;
   color: red;
+}
+
+
+.input-checkbox {
+  cursor: pointer;
 }
