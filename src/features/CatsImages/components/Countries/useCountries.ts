@@ -21,7 +21,7 @@ export const useCountries = () => {
     } finally {
       setLoading(false);
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -46,7 +46,12 @@ export const useCountries = () => {
 
   const removeCountry = useCallback(() => {
     setCountries((prev) => {
-      return prev.filter((country) => !selected.includes(country.id));
+      return prev.filter((country) => {
+        setSelected((prev) =>
+          prev.filter((currentId) => currentId !== country.id)
+        );
+        return !selected.includes(country.id);
+      });
     });
   }, [selected]);
 
@@ -70,5 +75,6 @@ export const useCountries = () => {
     selectedCountry,
     removeCountry,
     selectAll,
+    setCountries,
   };
 };

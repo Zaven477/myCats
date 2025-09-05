@@ -1,6 +1,10 @@
 import "./style.css";
-import { ClipLoader } from "react-spinners";
 import { useCountries } from "./useCountries";
+import { useAddCountries } from "./useAddCountries";
+import { ListCountries } from "./ListCountries/ListCountries";
+import { ClipLoader } from "react-spinners";
+import { Formik } from "formik";
+import { validationFieldsCountries } from "./validationFieldsCountries";
 
 export const Countries = () => {
   const {
@@ -11,49 +15,61 @@ export const Countries = () => {
     selectedCountry,
     removeCountry,
     selectAll,
+    setCountries,
   } = useCountries();
 
-  if (loading) {
-    return (
-      <div className="loader-countries">
-        <ClipLoader
-          color="rgba(33, 150, 243, 1)"
-          size={50}
-          cssOverride={{ borderWidth: "3px" }}
-        />
-      </div>
-    );
-  }
-
-  if (errorMessage) {
-    return <div className="errorMessage-countries">{errorMessage}</div>;
-  }
+  const { onSubmitForm, loadingCountries, initialValues } =
+    useAddCountries(setCountries, countries);
 
   return (
     <div className="container-countries">
-      <div className="wrapper">
-        <div className="containerBtnCountries">
-          <button className="btn-remove" onClick={removeCountry}>
-            Удалить
-          </button>
-          <button className="btn-selectAll" onClick={selectAll}>
-            {selected.length === countries.length
-              ? "Убрать все"
-              : "Выбрать все"}
-          </button>
-        </div>
-        {countries.map((country) => (
-          <div className="container-name" key={country.id}>
-            <input
-              type="checkbox"
-              className="input-checkbox"
-              checked={selected.includes(country.id)}
-              onChange={() => selectedCountry(country.id)}
-            />
-            <div>{country.name}</div>
-          </div>
-        ))}
-      </div>
+      <Formik
+        validationSchema={validationFieldsCountries}
+        initialValues={initialValues}
+        onSubmit={(values, actions) => {
+          onSubmitForm(values, actions);
+        }}
+      >
+        {(props) => {
+          return (
+            <form
+              className="containerInputAddCountries"
+              onSubmit={props.handleSubmit}
+            >
+              <div className="inputContainer">
+                <input
+                  type="text"
+                  name="country"
+                  onChange={props.handleChange}
+                  value={props.values.country}
+                  className={`${
+                    props.errors.country ? "borderInputCountries" : ""
+                  }`}
+                />
+                <div className="errorMessagecountries">
+                  {props.errors.country}
+                </div>
+              </div>
+              <button type="submit" className="btnAddCountries">
+                {loadingCountries ? (
+                  <ClipLoader size={20} color="blue" />
+                ) : (
+                  "Добавить"
+                )}
+              </button>
+            </form>
+          );
+        }}
+      </Formik>
+      <ListCountries
+        countries={countries}
+        selected={selected}
+        errorMessage={errorMessage}
+        loading={loading}
+        selectedCountry={selectedCountry}
+        removeCountry={removeCountry}
+        selectAll={selectAll}
+      />
     </div>
   );
 };
