@@ -1,3 +1,8 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
 .container-countries {
   margin-top: 120px;
   display: flex;
@@ -30,8 +35,6 @@
   font-size: 15px;
   padding: 0 10px;
   box-sizing: border-box;
-  overflow: hidden;
-  min-width: 0;
 }
 
 .btnAddCountries {
