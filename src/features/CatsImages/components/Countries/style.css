@@ -1,8 +1,6 @@
-html,
-body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
+* {
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .container-countries {
@@ -22,7 +20,6 @@ body {
   width: 100%;
   max-width: 500px;
   box-sizing: border-box;
-  min-width: 0;
 }
 
 .inputContainer {
