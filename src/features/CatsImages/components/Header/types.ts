@@ -7,7 +7,8 @@ export type TabType =
   | "comments"
   | "files"
   | "loginProfile"
-  | "countries";
+  | "countries"
+  | "theme";
 
 export type Tab = {
   id: TabType;

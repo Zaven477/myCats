@@ -11,6 +11,7 @@ import { CurrentsFiles } from "../features/CatsImages/components/CurrentsFiles/C
 import { LoginFormProfile } from "../features/CatsImages/components/LoginFormProfile/LoginFormProfile";
 import { UserProfile } from "../features/CatsImages/components/UserProfile/UserProfile";
 import { Countries } from "../features/CatsImages/components/Countries/Countries";
+import { Panel } from "../features/CatsImages/components/Panel/Panel";
 
 export const AppRouter = () => {
   return (
@@ -40,6 +41,7 @@ export const AppRouter = () => {
             }
           />
           <Route path="/countries" element={<Countries />}/>
+          <Route path="/themes" element={<Panel />}/>
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

@@ -6,6 +6,7 @@ import {
   URL_FILES,
   URL_LIST_COUNTRIES,
   URL_LOGIN_PROFILE,
+  URL_THEME,
   URL_TIMER,
 } from "../../../../../constants";
 import { useAppSelector } from "../../../store/reducer/hook";
@@ -59,10 +60,15 @@ export const useTabs = () => {
       label: "Личный кабинет",
       path: `${URL_LOGIN_PROFILE}`,
     },
-     {
+    {
       id: "countries",
       label: "Список стран",
       path: `${URL_LIST_COUNTRIES}`,
+    },
+    {
+      id: "theme",
+      label: "Изменение темы",
+      path: `${URL_THEME}`,
     },
   ];
 
