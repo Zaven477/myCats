@@ -9,7 +9,7 @@ export const DescriptionCountry = () => {
     <div>
       {currentCountries.map((country) =>
         country.id === countryId ? (
-          <article className="container-description">
+          <article className="container-description" key={country.id}>
             <Flag code={country.code} className="country-flag" />
             <h1>{country.name}</h1>
             <p>{country.description}</p>
