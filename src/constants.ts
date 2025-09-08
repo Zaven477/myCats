@@ -13,6 +13,7 @@ export const URL_LOGIN_PROFILE = '/loginProfile';
 export const URL_USER_PROFILE = '/loginProfile/user';
 export const URL_LIST_COUNTRIES = '/countries'
 export const URL_THEME = '/themes'
+export const URL_COUNTRY_DESCRIPTION = '/countries/'
 
 
 

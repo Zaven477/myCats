@@ -123,3 +123,9 @@
 .borderInputCountries {
   border: 1px solid red;
 }
+
+.currentCountry {
+  cursor: pointer;
+}
+
+

@@ -1,6 +1,7 @@
 import { ClipLoader } from "react-spinners";
 import type { TCountriesProps } from "../types";
 import Flag from "react-world-flags";
+import { useDiscriptionCountry } from "../DescriptionCountry/useDiscriptionCountry";
 
 export const ListCountries = ({
   countries,
@@ -11,6 +12,8 @@ export const ListCountries = ({
   removeCountry,
   selectAll,
 }: TCountriesProps) => {
+  const {ShowCountryDescription} = useDiscriptionCountry();
+
   if (loading) {
     return (
       <div className="loader-countries">
@@ -45,7 +48,12 @@ export const ListCountries = ({
           <div className="flagWrapper">
             <Flag code={country.code} className="flagCountry" />
           </div>
-          <div>{country.name}</div>
+          <div
+            className="currentCountry"
+            onClick={() => ShowCountryDescription(country.id, countries)}
+          >
+            {country.name}
+          </div>
         </div>
       ))}
     </div>

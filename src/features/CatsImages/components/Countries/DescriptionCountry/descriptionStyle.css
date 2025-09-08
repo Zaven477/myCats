@@ -1,0 +1,13 @@
+.country-flag {
+  max-width: 400px;
+  border: 1px solid black
+}
+
+.container-description {
+  padding: 20px;
+}
+
+.container-description p {
+  margin-top: 20px;
+  font-size: 18px;
+}

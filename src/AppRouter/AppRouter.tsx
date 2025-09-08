@@ -12,6 +12,7 @@ import { LoginFormProfile } from "../features/CatsImages/components/LoginFormPro
 import { UserProfile } from "../features/CatsImages/components/UserProfile/UserProfile";
 import { Countries } from "../features/CatsImages/components/Countries/Countries";
 import { Panel } from "../features/CatsImages/components/Panel/Panel";
+import { DescriptionCountry } from "../features/CatsImages/components/Countries/DescriptionCountry/DescriptionCountry";
 
 export const AppRouter = () => {
   return (
@@ -41,6 +42,7 @@ export const AppRouter = () => {
             }
           />
           <Route path="/countries" element={<Countries />}/>
+          <Route path="/countries/:currentId" element={<DescriptionCountry />}/>
           <Route path="/themes" element={<Panel />}/>
           <Route path="*" element={<NotFoundPage />} />
         </Route>
