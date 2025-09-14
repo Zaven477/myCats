@@ -13,6 +13,17 @@ export const DescriptionCountry = () => {
             <Flag code={country.code} className="country-flag" />
             <h1>{country.name}</h1>
             <p>{country.description}</p>
+            <div className="containerImagesCountries">
+              <div className="wrapperImages">
+                {country.images?.map((image) => (
+                  <img
+                    key={image.id}
+                    src={image.url}
+                    className="images-currentCountry"
+                  />
+                ))}
+              </div>
+            </div>
           </article>
         ) : null
       )}

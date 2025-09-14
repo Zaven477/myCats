@@ -1,8 +1,11 @@
+import type { TImage } from "../../api/getListCountries/types";
+
 export type TCountries = {
   id: number;
   name: string;
   code: string;
   description: string;
+  images: TImage[];
 };
 
 export type TCountriesProps = {

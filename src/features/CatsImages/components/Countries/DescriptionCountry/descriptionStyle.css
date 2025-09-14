@@ -1,6 +1,6 @@
 .country-flag {
   max-width: 400px;
-  border: 1px solid black
+  border: 1px solid black;
 }
 
 .container-description {
@@ -10,4 +10,63 @@
 .container-description p {
   margin-top: 20px;
   font-size: 18px;
+}
+
+.containerImagesCountries {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapperImages {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  animation: images-scrool var(--images-duration, 10s) linear infinite;
+}
+
+.wrapperImages:hover {
+  animation-play-state: paused;
+}
+
+.images-currentCountry {
+  width: 400px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@keyframes images-scrool {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1189px) {
+  .wrapperImages {
+    width: max-content;
+    height: 100%;
+    animation: images-scrool var(--images-duration, 20s) linear infinite;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 450px) {
+  .images-currentCountry {
+    width: 340px;
+    height: 250px;
+  }
+}
+
+
+@media (min-width: 340px) and (max-width: 400px) {
+  .images-currentCountry {
+    width: 290px;
+    height: 250px;
+  }
 }
