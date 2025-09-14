@@ -48,12 +48,6 @@
   }
 }
 
-@media (min-width: 1189px) {
-  .wrapperImages:hover {
-    animation-play-state: paused;
-  }
-}
-
 @media (max-width: 1189px) {
   .wrapperImages {
     width: max-content;
