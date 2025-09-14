@@ -27,10 +27,6 @@
   animation: images-scrool var(--images-duration, 10s) linear infinite;
 }
 
-.wrapperImages:hover {
-  animation-play-state: paused;
-}
-
 .images-currentCountry {
   width: 400px;
   height: 250px;
