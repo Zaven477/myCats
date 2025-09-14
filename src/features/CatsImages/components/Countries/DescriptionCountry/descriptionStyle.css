@@ -48,6 +48,12 @@
   }
 }
 
+@media (min-width: 1189px) {
+  .wrapperImages:hover {
+    animation-play-state: paused;
+  }
+}
+
 @media (max-width: 1189px) {
   .wrapperImages {
     width: max-content;
@@ -62,7 +68,6 @@
     height: 250px;
   }
 }
-
 
 @media (min-width: 340px) and (max-width: 400px) {
   .images-currentCountry {
