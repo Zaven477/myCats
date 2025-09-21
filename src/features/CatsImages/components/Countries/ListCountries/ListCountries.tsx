@@ -2,6 +2,7 @@ import { ClipLoader } from "react-spinners";
 import type { TCountriesProps } from "../types";
 import Flag from "react-world-flags";
 import { useDiscriptionCountry } from "../DescriptionCountry/useDiscriptionCountry";
+import { AlertCircle } from "lucide-react";
 
 export const ListCountries = ({
   countries,
@@ -12,7 +13,7 @@ export const ListCountries = ({
   removeCountry,
   selectAll,
 }: TCountriesProps) => {
-  const {ShowCountryDescription} = useDiscriptionCountry();
+  const { ShowCountryDescription } = useDiscriptionCountry();
 
   if (loading) {
     return (
@@ -36,6 +37,10 @@ export const ListCountries = ({
         <button className="btn-selectAll" onClick={selectAll}>
           {selected.length === countries.length ? "Убрать все" : "Выбрать все"}
         </button>
+      </div>
+      <div className="alertInfo">
+        <AlertCircle color="#1E90FF"/>
+        <span>Нажмите на название страны, чтобы узнать больше.</span>
       </div>
       {countries.map((country) => (
         <div className="container-name" key={country.id}>

@@ -18,8 +18,10 @@ export const Countries = () => {
     setCountries,
   } = useCountries();
 
-  const { onSubmitForm, loadingCountries, initialValues } =
-    useAddCountries(setCountries, countries);
+  const { onSubmitForm, loadingCountries, initialValues } = useAddCountries(
+    setCountries,
+    countries
+  );
 
   return (
     <div className="container-countries">
