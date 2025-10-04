@@ -8,7 +8,8 @@ export type TabType =
   | "files"
   | "loginProfile"
   | "countries"
-  | "theme";
+  | "theme"
+  | "infinite";
 
 export type Tab = {
   id: TabType;

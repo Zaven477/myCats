@@ -4,6 +4,7 @@ import {
   URL_CATS_SLIDES,
   URL_COMMENTS,
   URL_FILES,
+  URL_INFINITE,
   URL_LIST_COUNTRIES,
   URL_LOGIN_PROFILE,
   URL_THEME,
@@ -69,6 +70,11 @@ export const useTabs = () => {
       id: "theme",
       label: "Изменение темы",
       path: `${URL_THEME}`,
+    },
+     {
+      id: "infinite",
+      label: "Бесконечная прокрутка",
+      path: `${URL_INFINITE}`,
     },
   ];
 

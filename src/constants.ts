@@ -14,6 +14,8 @@ export const URL_USER_PROFILE = '/loginProfile/user';
 export const URL_LIST_COUNTRIES = '/countries'
 export const URL_THEME = '/themes'
 export const URL_COUNTRY_DESCRIPTION = '/countries/'
+export const URL_INFINITE = '/infinite/cats'
+export const COUNT_CATS_INFINITE = 10;
 
 
 
