@@ -16,6 +16,7 @@ export const URL_THEME = '/themes'
 export const URL_COUNTRY_DESCRIPTION = '/countries/'
 export const URL_INFINITE = '/infinite/cats'
 export const COUNT_CATS_INFINITE = 10;
+export const URL_CURRENT_PDF = '/current_pdf'
 
 
 

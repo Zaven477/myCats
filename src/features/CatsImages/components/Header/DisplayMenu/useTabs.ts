@@ -3,6 +3,7 @@ import {
   URL_CATS_FAVORITES,
   URL_CATS_SLIDES,
   URL_COMMENTS,
+  URL_CURRENT_PDF,
   URL_FILES,
   URL_INFINITE,
   URL_LIST_COUNTRIES,
@@ -71,10 +72,15 @@ export const useTabs = () => {
       label: "Изменение темы",
       path: `${URL_THEME}`,
     },
-     {
+    {
       id: "infinite",
       label: "Бесконечная прокрутка",
       path: `${URL_INFINITE}`,
+    },
+     {
+      id: "pdf",
+      label: "Скачивание в формате PDF",
+      path: `${URL_CURRENT_PDF}`,
     },
   ];
 

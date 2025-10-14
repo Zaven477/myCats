@@ -1,0 +1,84 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+.field {
+  padding-left: 2px;
+  padding-top: 2px;
+  width: 400px;
+  height: 300px;
+}
+
+.btnSave {
+  width: 120px;
+  height: 25px;
+  background: #00bfff;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.currentText {
+  font-size: 16px;
+}
+
+.btnDownload {
+  width: 100px;
+  height: 25px;
+  background: #ffa500;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.fieldBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 530px) {
+  .documentpdf {
+    width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .documentpdf {
+    width: 400px;
+  }
+}
+
+@media (max-width: 460px) {
+  .field {
+    width: 350px;
+  }
+}
+
+@media (max-width: 430px) {
+  .documentpdf {
+    width: 350px;
+  }
+}
+
+@media (max-width: 390px) {
+  .field {
+    width: 300px;
+  }
+}
+
+@media (max-width: 370px) {
+  .documentpdf {
+    width: 300px;
+  }
+}
