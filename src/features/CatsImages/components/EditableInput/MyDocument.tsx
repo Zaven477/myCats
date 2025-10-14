@@ -10,7 +10,7 @@ export const MyDocument = ({ text }: MyDocumentProps) => {
             paddingLeft: "5px",
             paddingTop: "5px",
             paddingRight: "5px",
-            fontSize: "10px",
+            fontSize: "16px",
           }}
         >
           {text}
