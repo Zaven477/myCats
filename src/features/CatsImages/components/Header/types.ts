@@ -10,7 +10,8 @@ export type TabType =
   | "countries"
   | "theme"
   | "infinite"
-  | "pdf";
+  | "pdf"
+  | "statistics";
 
 export type Tab = {
   id: TabType;

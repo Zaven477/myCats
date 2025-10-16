@@ -15,6 +15,7 @@ import { Panel } from "../features/CatsImages/components/Panel/Panel";
 import { DescriptionCountry } from "../features/CatsImages/components/Countries/DescriptionCountry/DescriptionCountry";
 import { ListCatsInfinite } from "../features/CatsImages/components/ListCatsInfinite/ListCatsInfinite";
 import { EditableInput } from "../features/CatsImages/components/EditableInput/EditableInput";
+import { DashboardUsers } from "../features/CatsImages/components/DashboardUsers/DashboardUsers";
 
 export const AppRouter = () => {
   return (
@@ -48,6 +49,7 @@ export const AppRouter = () => {
           <Route path="/themes" element={<Panel />}/>
           <Route path="/infinite/cats" element={<ListCatsInfinite />}/>
           <Route path="/current_pdf" element={<EditableInput />}/>
+          <Route path="/current_statistics" element={<DashboardUsers />}/>
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

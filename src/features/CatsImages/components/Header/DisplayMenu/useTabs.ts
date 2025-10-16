@@ -4,6 +4,7 @@ import {
   URL_CATS_SLIDES,
   URL_COMMENTS,
   URL_CURRENT_PDF,
+  URL_CURRENT_STATISTICS,
   URL_FILES,
   URL_INFINITE,
   URL_LIST_COUNTRIES,
@@ -81,6 +82,11 @@ export const useTabs = () => {
       id: "pdf",
       label: "Скачивание в формате PDF",
       path: `${URL_CURRENT_PDF}`,
+    },
+    {
+      id: "statistics",
+      label: "Статистика",
+      path: `${URL_CURRENT_STATISTICS}`,
     },
   ];
 
