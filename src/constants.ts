@@ -18,6 +18,7 @@ export const URL_INFINITE = '/infinite/cats'
 export const COUNT_CATS_INFINITE = 10;
 export const URL_CURRENT_PDF = '/current_pdf'
 export const URL_CURRENT_STATISTICS = '/current_statistics'
+export const URL_CURRENT_DASHBOARD = '/current_dashboard'
 
 
 

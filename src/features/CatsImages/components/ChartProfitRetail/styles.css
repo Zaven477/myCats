@@ -1,0 +1,47 @@
+.containerProfitDashboard {
+  max-width: 500px;
+  width: 100%;
+  height: 250px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.titleProfits {
+  max-width: 500px;
+  text-align: center;
+  min-height: 70px;
+}
+
+.wrapperRetails {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 110px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+.magnet {
+  color: #800080;
+}
+
+.globe {
+  color: #008000;
+}
+
+@media (max-width: 1140px) {
+  .containerProfitDashboard {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 870px) {
+  .containerProfitDashboard {
+    margin-top: 40px;
+  }
+}

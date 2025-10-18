@@ -1,0 +1,34 @@
+.containerCompany {
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 250px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.titleCompanies {
+  text-align: center;
+  max-width: 500px;
+  min-height: 70px;
+}
+
+.containerCompanies {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 110px;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleBrain {
+  color: #1f77b4;
+}
+
+.titleLuxoft {
+  color: #ffbb78;
+}

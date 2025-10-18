@@ -11,7 +11,8 @@ export type TabType =
   | "theme"
   | "infinite"
   | "pdf"
-  | "statistics";
+  | "statistics"
+  | "statisticsData";
 
 export type Tab = {
   id: TabType;

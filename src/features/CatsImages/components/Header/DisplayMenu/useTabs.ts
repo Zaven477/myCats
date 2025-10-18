@@ -3,6 +3,7 @@ import {
   URL_CATS_FAVORITES,
   URL_CATS_SLIDES,
   URL_COMMENTS,
+  URL_CURRENT_DASHBOARD,
   URL_CURRENT_PDF,
   URL_CURRENT_STATISTICS,
   URL_FILES,
@@ -87,6 +88,11 @@ export const useTabs = () => {
       id: "statistics",
       label: "Статистика",
       path: `${URL_CURRENT_STATISTICS}`,
+    },
+    {
+      id: "statisticsData",
+      label: "Дашборд",
+      path: `${URL_CURRENT_DASHBOARD}`,
     },
   ];
 

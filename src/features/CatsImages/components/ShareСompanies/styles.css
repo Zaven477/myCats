@@ -1,0 +1,13 @@
+.titleShare {
+  min-height: 70px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.containerShare {
+  max-width: 500px;
+  width: 100%;
+  height: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
