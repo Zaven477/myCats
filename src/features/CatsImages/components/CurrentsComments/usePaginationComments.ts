@@ -1,48 +1,47 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppDispatch } from "../../store/reducer/hook";
 import { getCurrentComments } from "../../store/actions";
-import { buildPaginationPages } from "./utils";
+import { paginationPages } from "./utils";
 
 export const usePaginationComments = () => {
   const dispatch = useAppDispatch();
-  const pages = Array.from({ length: 10 }, (_, index) => index + 1);
   const [currentPage, setCurrentPage] = useState(1);
-  const [activePage, setActivePage] = useState(1);
-  const paginationPages = buildPaginationPages(pages, currentPage);
+  const { rangeCurrentsPages, pages } = paginationPages(currentPage);
+
+  useEffect(() => {
+    const saved = sessionStorage.getItem("savePage");
+    const savedCurrentPage = saved === null ? 1 : Number(saved);
+    setCurrentPage(savedCurrentPage);
+  }, []);
 
   useEffect(() => {
     dispatch(getCurrentComments(currentPage));
+    sessionStorage.setItem("savePage", JSON.stringify(currentPage));
   }, [dispatch, currentPage]);
 
-  const changePage = useCallback((page: string | number) => {
+  const changePage = (page: number | string) => {
     if (typeof page === "number") {
-      setActivePage(page);
       setCurrentPage(page);
     }
-  }, []);
+  };
 
-  const nextPage = useCallback(() => {
+  const nextPage = () => {
     setCurrentPage((prev) => {
       const newPage = prev + 1;
-      setActivePage(newPage);
       return newPage;
     });
-  }, []);
+  };
 
-  const prevPage = useCallback(() => {
-    setCurrentPage((prev) => {
-      const newPage = prev - 1;
-      setActivePage(newPage);
-      return newPage;
-    });
-  }, []);
+  const goToFirstPage = () => {
+    setCurrentPage(1);
+  };
 
   return {
-    paginationPages,
+    rangeCurrentsPages,
+    pages,
     currentPage,
-    activePage,
     changePage,
     nextPage,
-    prevPage,
+    goToFirstPage,
   };
 };
