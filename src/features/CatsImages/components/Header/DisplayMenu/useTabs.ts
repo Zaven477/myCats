@@ -3,6 +3,7 @@ import {
   URL_CATS_FAVORITES,
   URL_CATS_SLIDES,
   URL_COMMENTS,
+  URL_CONTEXTUAL_SEARCH,
   URL_CURRENT_DASHBOARD,
   URL_CURRENT_PDF,
   URL_CURRENT_STATISTICS,
@@ -93,6 +94,11 @@ export const useTabs = () => {
       id: "statisticsData",
       label: "Дашборд",
       path: `${URL_CURRENT_DASHBOARD}`,
+    },
+    {
+      id: "contextualSearch",
+      label: "Контекстный поиск",
+      path: `${URL_CONTEXTUAL_SEARCH}`,
     },
   ];
 

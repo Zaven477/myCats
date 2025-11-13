@@ -12,7 +12,8 @@ export type TabType =
   | "infinite"
   | "pdf"
   | "statistics"
-  | "statisticsData";
+  | "statisticsData"
+  | 'contextualSearch'
 
 export type Tab = {
   id: TabType;
