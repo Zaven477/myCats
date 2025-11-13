@@ -63,7 +63,7 @@ export const UsersFiltering = () => {
       )}
       {message ? (
         <div className="matchesMessage">
-          <p>{message}</p>
+          <p className="searchMessage">{message}</p>
         </div>
       ) : (
         <ul className="listUsers">

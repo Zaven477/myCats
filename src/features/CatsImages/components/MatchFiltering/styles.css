@@ -27,6 +27,10 @@
   margin-top: 20px;
 }
 
+.searchMessage {
+  font-size: 18px;
+}
+
 .loaderUsers {
   display: flex;
   justify-content: center;
