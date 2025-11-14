@@ -3,3 +3,8 @@ export type Users = {
   firstName: string;
   lastName: string;
 };
+
+export type FindMatchesProps = {
+  user: Users;
+  searchValue: string;
+}

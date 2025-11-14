@@ -3,18 +3,18 @@ import { getData } from "../../api/getData";
 import type { Users } from "./types";
 import "./styles.css";
 import { ClipLoader } from "react-spinners";
-import { findMatches } from "./utils";
+import { FindMatches } from "./FindMatches";
 
 export const UsersFiltering = () => {
   const [users, setUsers] = useState<Users[]>([]);
   const [allUsers, setAllUsers] = useState<Users[]>([]);
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [searchValue, setSearchValue] = useState('')
+  const [searchValue, setSearchValue] = useState("");
 
   const searchMatch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value.trim();
-    setSearchValue(value)
+    setSearchValue(value);
 
     const filtered = allUsers.filter((user) => {
       const normalizedFirstName = user.firstName.toLowerCase();
@@ -69,7 +69,7 @@ export const UsersFiltering = () => {
         <ul className="listUsers">
           {users.map((user) => (
             <li key={user.id}>
-              {findMatches(`${user.firstName} ${user.lastName}`, searchValue)}
+              <FindMatches user={user} searchValue={searchValue} />
             </li>
           ))}
         </ul>
