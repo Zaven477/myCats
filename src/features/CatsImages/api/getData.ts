@@ -21,8 +21,8 @@ const users = [
   },
   {
     id: 5,
-    firstName: "Александр",
-    lastName: "Еремин",
+    firstName: "Станислав",
+    lastName: "Воронин",
   },
   {
     id: 6,
@@ -36,8 +36,8 @@ const users = [
   },
   {
     id: 8,
-    firstName: "Станислав",
-    lastName: "Воронин",
+    firstName: "Александр",
+    lastName: "Еремин",
   },
   {
     id: 9,
