@@ -20,6 +20,7 @@ export const URL_CURRENT_PDF = '/current_pdf'
 export const URL_CURRENT_STATISTICS = '/current_statistics'
 export const URL_CURRENT_DASHBOARD = '/current_dashboard'
 export const URL_CONTEXTUAL_SEARCH = '/contextualSearch'
+export const URL_COUNTRIES_SLIDES = '/countries-slides'
 
 
 

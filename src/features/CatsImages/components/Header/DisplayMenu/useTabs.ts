@@ -4,6 +4,7 @@ import {
   URL_CATS_SLIDES,
   URL_COMMENTS,
   URL_CONTEXTUAL_SEARCH,
+  URL_COUNTRIES_SLIDES,
   URL_CURRENT_DASHBOARD,
   URL_CURRENT_PDF,
   URL_CURRENT_STATISTICS,
@@ -99,6 +100,11 @@ export const useTabs = () => {
       id: "contextualSearch",
       label: "Контекстный поиск",
       path: `${URL_CONTEXTUAL_SEARCH}`,
+    },
+    {
+      id: "countriesSlides",
+      label: "Изображения",
+      path: `${URL_COUNTRIES_SLIDES}`,
     },
   ];
 

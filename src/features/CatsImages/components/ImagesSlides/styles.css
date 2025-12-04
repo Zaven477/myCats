@@ -1,0 +1,77 @@
+.current-image {
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.slidesContainer {
+  display: flex;
+  gap: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.slidesContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapperContainer {
+  max-width: 840px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.centeringSlides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  max-width: 1000px;
+  width: 100%;
+  background: #dcdcdc;
+  position: relative;
+  border-radius: 5px;
+}
+
+.wrapperLuCircleChevron {
+  position: absolute;
+  top: 20px;
+  display: flex;
+  gap: 5px;
+  right: 50px;
+}
+
+.wrapperLuCircleChevron > * {
+  cursor: pointer;
+}
+
+.wrapperCenteringSlides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+@media (max-width: 870px) {
+  .wrapperContainer {
+    width: 630px;
+  }
+}
+
+@media (max-width: 650px) {
+  .wrapperContainer {
+    width: 420px;
+  }
+}
+
+@media (max-width: 440px) {
+  .wrapperContainer {
+    width: 210px;
+  }
+}
+
+

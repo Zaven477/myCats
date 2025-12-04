@@ -14,6 +14,7 @@ export type TabType =
   | "statistics"
   | "statisticsData"
   | 'contextualSearch'
+  | 'countriesSlides'
 
 export type Tab = {
   id: TabType;
