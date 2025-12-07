@@ -7,37 +7,19 @@ export const ImagesSlides = () => {
   const [isDisabledBtnLeft, setDisabledBtnLeft] = useState(true);
   const [isDisabledBtnRight, setDisabledBtnRight] = useState(false);
   const currentRef = useRef<HTMLDivElement>(null);
+  const [widthImage, setWidthImage] = useState(0);
+  const [gap, setGap] = useState(0);
 
   const nextSlide = () => {
-    const container = currentRef.current;
-
-    if (!container) {
-      return;
-    }
-
-    const currentWidthImage = container.children[0].clientWidth;
-    const styles = getComputedStyle(container);
-    const gap = parseInt(styles.columnGap);
-
-    container.scrollTo({
-      left: container.scrollLeft + currentWidthImage + gap,
+    currentRef.current?.scrollTo({
+      left: currentRef.current.scrollLeft + widthImage + gap,
       behavior: "smooth",
     });
   };
 
   const prevSlide = () => {
-    const container = currentRef.current;
-
-    if (!container) {
-      return;
-    }
-
-    const currentWidthImage = container.children[0].clientWidth;
-    const styles = getComputedStyle(container);
-    const gap = parseInt(styles.columnGap);
-
-    container.scrollTo({
-      left: container.scrollLeft - (currentWidthImage + gap),
+    currentRef.current?.scrollTo({
+      left: currentRef.current.scrollLeft - (widthImage + gap),
       behavior: "smooth",
     });
   };
@@ -47,6 +29,13 @@ export const ImagesSlides = () => {
     if (!container) {
       return;
     }
+
+    const currentWidthImage = container.children[0].clientWidth;
+    const styles = getComputedStyle(container);
+    const gapImage = parseInt(styles.columnGap);
+
+    setWidthImage(currentWidthImage);
+    setGap(gapImage);
 
     const observer = new IntersectionObserver(
       (entries) => {
