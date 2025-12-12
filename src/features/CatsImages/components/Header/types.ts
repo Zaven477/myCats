@@ -13,8 +13,9 @@ export type TabType =
   | "pdf"
   | "statistics"
   | "statisticsData"
-  | 'contextualSearch'
-  | 'countriesSlides'
+  | "contextualSearch"
+  | "countriesSlides"
+  | "userForm";
 
 export type Tab = {
   id: TabType;

@@ -19,6 +19,7 @@ import { DashboardUsers } from "../features/CatsImages/components/DashboardUsers
 import { Dashboard } from "../features/CatsImages/components/Dashboard/Dashboard";
 import { UsersFiltering } from "../features/CatsImages/components/MatchFiltering/MatchFiltering";
 import { ImagesSlides } from "../features/CatsImages/components/ImagesSlides/ImagesSlides";
+import { UserForm } from "../features/CatsImages/components/UserForm/UserForm";
 
 export const AppRouter = () => {
   return (
@@ -59,6 +60,7 @@ export const AppRouter = () => {
           <Route path="/current_dashboard" element={<Dashboard />} />
           <Route path="/contextualSearch" element={<UsersFiltering />} />
           <Route path="/countries-slides" element={<ImagesSlides />} />
+          <Route path="/user-form" element={<UserForm />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

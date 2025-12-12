@@ -14,6 +14,7 @@ import {
   URL_LOGIN_PROFILE,
   URL_THEME,
   URL_TIMER,
+  URL_USER_FORM,
 } from "../../../../../constants";
 import { useAppSelector } from "../../../store/reducer/hook";
 import { currentFavoritesCats } from "../../../store/selectors";
@@ -105,6 +106,11 @@ export const useTabs = () => {
       id: "countriesSlides",
       label: "Изображения",
       path: `${URL_COUNTRIES_SLIDES}`,
+    },
+    {
+      id: "userForm",
+      label: "Личные данные",
+      path: `${URL_USER_FORM}`,
     },
   ];
 
